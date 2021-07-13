@@ -8,84 +8,51 @@
   <title>Login Gama</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap&family=Exo:wght@300" rel="stylesheet">
-  <style>
-    body {
-      min-height: 100vh;
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Satisfy&display=swap" rel="stylesheet">
 
-    .altura-full-size {
-      height: 100vh;
-    }
-
-    .esquerdo {
-      background-color: #DB1A37;
-      min-height: 100%;
-      position: fixed;
-      margin: ;
-    }
-
-    .titulo {
-      font-family: 'Pacifico', cursive;
-      color: #fff;
-    }
-
-    .linha-titulo {
-      border: #fff 5px solid;
-      width: 80px;
-    }
-
-    .subtitulo {
-      font-family: 'Exo', sans-serif;
-      font-size: 16px;
-      color: #fff;
-    }
-
-    .direito {
-      background-color: #f2f2f2;
-      min-height: 100%;
-      margin-left: 50%;
-    }
-  </style>
-</head>
-
-<body class="conteiner-fluid">
-  <main class="row">
-    <section class="col-md-6 p-5 altura-full-size esquerdo">
-      <h1 class="titulo">Gama Experience</h1>
-      <hr class="linha-titulo">
-      <br>
-      <h2 class="subtitulo">O maior programa de seleção, capacitação e recrutamento de talentos para o mercado
-        digital.</h2>
-    </section>
-    <section class="col-md-6 p-5 altura-full-size direito">
-      <form class="row" action="/login" method="POST">
-        <div class="col-md-12">
-          <h2>Login</h2>
-          <hr>
+<body>
+  <main>
+    <div class="row">
+      <div class="col-md-6">
+        <div>
+          <h1 style="font-family: 'Satisfy', cursive;">Gama Experience</h1>
         </div>
-        <div class="col-md-12">
-          <label for="email">E-mail</label>
-          <input type="email" name="email" id="email" title="Preencha este campo." class="form-control">
+        <hr>
+        <div>
+          <h3 style="font-family: 'Kalam', cursive;">O maior programa de seleção, capacitação e recrutamento de talentos
+            para o mercado digital.</h3>
         </div>
-        <div class="col-md-12">
-          <label for="senha">Senha</label>
-          <input type="password" name="password" id="senha" title="Preencha este campo." class="form-control">
+      </div>
+      <div class="col-md-6">
+        <div>
+          <h2 style="font-family: 'Satisfy', cursive;">Login</h2>
         </div>
-        <div class="col-md-12">
-          <input type="checkbox" name="reminder" id="lembrar" class="form-check-input">
-          <label for="lembrar" class="form-check-label">Lembrar-me</label>
+        <hr>
+        <div>
+          <form action="/send" method="POST">
+            <div class="input-group">
+              <span class="input-group-text" id="email">@</span>
+              <input type="email" class="form-control" placeholder="E-mail">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text" id="senha">*</span>
+              <input type="password" class="form-control" placeholder="Senha">
+            </div>
+            <div>
+              <input type="checkbox" name="reminder" id="reminder">
+              <label for="reminder">Lembrar de mim</label>
+            </div>
+            <div>
+              <button class="btn btn-primary" type="button">Entrar</button>
+            </div>
+            <div>
+              <a href="/reset-password">Esqueceu a senha? Recuperar!</a>
+            </div>
+          </form>
         </div>
-        <div class="col-md-12 d-grid gap-2">
-          <button type="submit" class="btn btn-primary">Entrar</button>
-        </div>
-        <div class="col-md-12">
-          <a href="/reset-password">Esqueceu sua senha? Recuperar!</a>
-        </div>
-      </form>
-    </section>
+      </div>
+    </div>
   </main>
-
 </body>
 
 </html>
